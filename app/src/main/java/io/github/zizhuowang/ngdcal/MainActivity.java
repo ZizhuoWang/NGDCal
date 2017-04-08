@@ -39,16 +39,16 @@ public class MainActivity extends AppCompatActivity {
         public void handleMessage(Message m) {
             if(m.arg1 == 1){
                 numA = m.arg2;
-                source.append("A:"+numA.toString()+"\n");
+                source.append(in1+numA.toString()+"\n");
             }
             if(m.arg1 == 2){
                 numB = m.arg2;
-                source.append("B:"+numB.toString()+"\n");
+                source.append(in2+numB.toString()+"\n");
             }
             if(m.arg1 == 3){
                 numC = m.arg2;
                 result = Calculate(numA,numB,numC);
-                source.append("A+B:"+numC.toString()+"\n"+result.toString()+"\n");
+                source.append(in1+"+"+in2+numC.toString()+"\n"+result.toString()+"\n");
                 output2.setText(result.toString());
                 if (result < 0.3) {
                     output1.setText("非常相似");
